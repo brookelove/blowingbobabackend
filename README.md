@@ -1,5 +1,7 @@
 # 🍵 Blowing Boba Backend 🍵
 
+![Blowing Boba](./Images/blowingBoba.png)
+
 CS 602 final project backend portion using MongoDB and Node.js
 
 ## Table of Contents
