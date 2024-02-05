@@ -11,8 +11,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use(express.static(path.join(__dirname, "public")));
-app.use("/", routes); //Public Routes
-app.use("/api", routes.api); // API routes
+app.use("/", routes); //All routes including API and Public
 
 app.use((req, res) => {
   res.status(404).send("404: Page not found");
