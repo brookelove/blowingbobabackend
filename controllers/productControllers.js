@@ -1,0 +1,68 @@
+const { Products } = require("../models");
+const getAllProducts = async (req, res) => {
+  try {
+    const products = await Products.find();
+    res.json(products);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+};
+const getSingleProduct = async (req, res) => {
+  try {
+    const product = await Products.findOne({ _id: req.params.productId });
+    if (!product) {
+      return res.status(404).json({ message: "No product with that ID" });
+    }
+    res.json(product);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+};
+const createProduct = async (req, res) => {
+  try {
+    const product = await Products.create(req.body);
+    if (!product) {
+      return res.status(404).json({
+        message: "product created 🎉",
+      });
+    }
+
+    res.json("Created the product 🎉");
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+};
+const updateProduct = async (req, res) => {
+  let id = req.body.id;
+  try {
+    const product = await Products.findByIdAndUpdate(id, req.body, {
+      new: true,
+    });
+    if (!product) {
+      return res.status(404).json({ message: "No product with that ID" });
+    }
+    res.json(product);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+};
+const deleteProduct = async (res, res, next) => {
+  let id = req.params.id;
+  try {
+    const product = await Products.findByIdAndDelete(req.params.id); //might change to isShown and make boolean either true or false so then it is not deleted but managers
+    if (!product) {
+      return res.status(404).json({ message: "No product with that ID" });
+    }
+    res.json({ message: "product deleted successfully" });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+};
+module.exports = {
+  getAllProducts,
+  getSingleProduct,
+  createProduct,
+  updateProduct,
+  deleteProduct,
+};
