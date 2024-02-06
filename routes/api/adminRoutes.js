@@ -8,10 +8,10 @@ const {
   deleteAdmin,
 } = require("../../controllers/adminControllers");
 
-adminRouter.get("/admin", getAllAdmin);
-adminRouter.get("/admin/:id", getSingleAdmin);
-adminRouter.post("/admin", createAdmin);
-adminRouter.put("/admin/:id", updateAdmin);
-adminRouter.delete("/admin/:id", deleteAdmin);
+adminRouter.get("/", getAllAdmin);
+adminRouter.get("/:id", getSingleAdmin);
+adminRouter.post("/", createAdmin);
+adminRouter.put("/:id", updateAdmin);
+adminRouter.delete("/:id", deleteAdmin);
 
 module.exports = adminRouter;

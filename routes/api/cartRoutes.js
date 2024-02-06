@@ -10,7 +10,7 @@ const {
 
 cartRouter.get("/cart", getAllCarts);
 cartRouter.get("/cart/:id", getSingleCart);
-cartRouter.post("cart", createCart);
+cartRouter.post("/cart", createCart);
 cartRouter.put("/cart/:id", updateCart);
 cartRouter.delete("/cart/:id", deleteCart);
 

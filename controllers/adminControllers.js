@@ -19,7 +19,9 @@ const getSingleAdmin = async (req, res, next) => {
   }
 };
 const createAdmin = async (req, res, next) => {
+  console.log("Create Admin Controller");
   try {
+    console.log("Request Body:", req.body);
     const admin = await Admin.create(req.body);
     if (!admin) {
       return res.status(404).json({
