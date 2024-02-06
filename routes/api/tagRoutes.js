@@ -8,10 +8,10 @@ const {
   deleteTag,
 } = require("../../controllers/tagControllers");
 
-tagRouter.get("/tag", getAllTags);
-tagRouter.get("/tag/:id", getSingleTag);
-tagRouter.post("/tag", createTag);
-tagRouter.put("/tag/:id", updateTag);
-tagRouter.delete("/tag/:id", deleteTag);
+tagRouter.get("/", getAllTags);
+tagRouter.get("/:id", getSingleTag);
+tagRouter.post("/", createTag);
+tagRouter.put("/:id", updateTag);
+tagRouter.delete("/:id", deleteTag);
 
 module.exports = tagRouter;

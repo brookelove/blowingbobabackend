@@ -8,10 +8,10 @@ const {
   deleteCustomer,
 } = require("../../controllers/customerControllers");
 
-customerRouter.get("/customer", getAllCustomers);
-customerRouter.get("/customer/:id", getSingleCustomer);
-customerRouter.post("/customer", createCustomer);
-customerRouter.put("/customer/:id", updateCustomer);
-customerRouter.delete("/customer/:id", deleteCustomer);
+customerRouter.get("/", getAllCustomers);
+customerRouter.get("/:id", getSingleCustomer);
+customerRouter.post("/", createCustomer);
+customerRouter.put("/:id", updateCustomer);
+customerRouter.delete("/:id", deleteCustomer);
 
 module.exports = customerRouter;
