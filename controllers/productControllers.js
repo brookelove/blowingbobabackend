@@ -1,7 +1,7 @@
-const { Products } = require("../models");
+const Product = require("../models/Products");
 const getAllProducts = async (req, res) => {
   try {
-    const products = await Products.find();
+    const products = await Product.find();
     res.json(products);
   } catch (err) {
     res.status(500).json(err);
@@ -9,7 +9,7 @@ const getAllProducts = async (req, res) => {
 };
 const getSingleProduct = async (req, res) => {
   try {
-    const product = await Products.findOne({ _id: req.params.productId });
+    const product = await Product.findOne({ _id: req.params.productId });
     if (!product) {
       return res.status(404).json({ message: "No product with that ID" });
     }
@@ -20,7 +20,7 @@ const getSingleProduct = async (req, res) => {
 };
 const createProduct = async (req, res) => {
   try {
-    const product = await Products.create(req.body);
+    const product = await Product.create(req.body);
     if (!product) {
       return res.status(404).json({
         message: "product created 🎉",
@@ -36,7 +36,7 @@ const createProduct = async (req, res) => {
 const updateProduct = async (req, res) => {
   let id = req.body.id;
   try {
-    const product = await Products.findByIdAndUpdate(id, req.body, {
+    const product = await Product.findByIdAndUpdate(id, req.body, {
       new: true,
     });
     if (!product) {
@@ -50,7 +50,7 @@ const updateProduct = async (req, res) => {
 const deleteProduct = async (res, res, next) => {
   let id = req.params.id;
   try {
-    const product = await Products.findByIdAndDelete(req.params.id); //might change to isShown and make boolean either true or false so then it is not deleted but managers
+    const product = await Product.findByIdAndDelete(req.params.id); //might change to isShown and make boolean either true or false so then it is not deleted but managers
     if (!product) {
       return res.status(404).json({ message: "No product with that ID" });
     }

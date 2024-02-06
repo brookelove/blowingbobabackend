@@ -13,6 +13,6 @@ const cartSchema = new Schema({
 
 module.exports = {
   getModel: (connection) => {
-    return connection.model("TagModel", cartSchema);
+    return connection.model("Cart", cartSchema);
   },
 };

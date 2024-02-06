@@ -1,4 +1,4 @@
-const { Admin } = require("../models");
+const Admin = require("../models/Admin");
 const getAllAdmin = async (req, res) => {
   try {
     const admins = await Admin.find();
@@ -36,7 +36,7 @@ const createAdmin = async (req, res) => {
 const updateAdmin = async (req, res) => {
   let id = req.body.id;
   try {
-    const admin = await Admin.findByIdAndUpdate(id, req.body, {
+    const admin = await Admin.findByIdAndUpdate(req.params.id, req.body, {
       new: true,
     });
     if (!admin) {
@@ -48,7 +48,6 @@ const updateAdmin = async (req, res) => {
   }
 };
 const deleteAdmin = async (res, res, next) => {
-  let id = req.params.id;
   try {
     const admin = await Admin.findByIdAndDelete(req.params.id);
     if (!admin) {

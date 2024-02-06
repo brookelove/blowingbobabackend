@@ -18,6 +18,6 @@ const customerSchema = new Schema({
 
 module.exports = {
   getModel: (connection) => {
-    return connection.model("TagModel", customerSchema);
+    return connection.model("Customer", customerSchema);
   },
 };

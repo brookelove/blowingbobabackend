@@ -14,6 +14,6 @@ const productSchema = new Schema({
 
 module.exports = {
   getModel: (connection) => {
-    return connection.model("TagModel", productSchema);
+    return connection.model("Product", productSchema);
   },
 };

@@ -1,7 +1,8 @@
-const { Cart, Product } = require("../models");
+const Cart = require("../models/Cart");
+const Product = require("../models/Products");
 const getAllCarts = async (req, res) => {
   try {
-    const carts = carts.map((cart) => ({
+    const carts = Cart.map((cart) => ({
       ...cart.toObject(),
       productCount: cart.products.length,
     }));

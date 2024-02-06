@@ -1,7 +1,7 @@
-const { Tags } = require("../models");
+const Tag = require("../models/Tags");
 const getAllTags = async (req, res) => {
   try {
-    const tags = await Tags.find();
+    const tags = await Tag.find();
     res.json(tags);
   } catch (err) {
     res.status(500).json(err);
@@ -9,7 +9,7 @@ const getAllTags = async (req, res) => {
 };
 const getSingleTag = async (req, res) => {
   try {
-    const tag = await Tags.findOne({ _id: req.params.tagId });
+    const tag = await Tag.findOne({ _id: req.params.tagId });
     if (!tag) {
       return res.status(404).json({ message: "No tag with that ID" });
     }
@@ -20,7 +20,7 @@ const getSingleTag = async (req, res) => {
 };
 const createTag = async (req, res) => {
   try {
-    const tag = await Tags.create(req.body);
+    const tag = await Tag.create(req.body);
     if (!tag) {
       return res.status(404).json({
         message: "tag created 🎉",
@@ -50,7 +50,7 @@ const updateTag = async (req, res) => {
 const deleteTag = async (res, res, next) => {
   let id = req.params.id;
   try {
-    const tag = await Tags.findByIdAndDelete(req.params.id); //might change to isShown and make boolean either true or false so then it is not deleted but managers
+    const tag = await Tag.findByIdAndDelete(req.params.id); //might change to isShown and make boolean either true or false so then it is not deleted but managers
     if (!tag) {
       return res.status(404).json({ message: "No tag with that ID" });
     }

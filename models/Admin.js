@@ -13,6 +13,6 @@ const adminSchema = new Schema({
 
 module.exports = {
   getModel: (connection) => {
-    return connection.model("TagModel", adminSchema);
+    return connection.model("Admin", adminSchema);
   },
 };
