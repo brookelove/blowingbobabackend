@@ -9,8 +9,4 @@ const tagSchema = new Schema({
   createdAt: Date,
 });
 
-module.exports = {
-  getModel: (connection) => {
-    return connection.model("Tag", tagSchema);
-  },
-};
+module.exports = mongoose.model("Tag", tagSchema);

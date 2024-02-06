@@ -16,8 +16,4 @@ const customerSchema = new Schema({
   pastOrders: [{ type: Schema.Types.ObjectId, ref: "Cart" }],
 });
 
-module.exports = {
-  getModel: (connection) => {
-    return connection.model("Customer", customerSchema);
-  },
-};
+module.exports = mongoose.model("Customer", customerSchema);

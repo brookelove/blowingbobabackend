@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
-const Tag = require("./Tags");
+// const Tag = require("./Tags");
 
 mongoose.Promise = global.Promise;
 
@@ -9,11 +9,7 @@ const productSchema = new Schema({
   description: String,
   price: Number,
   stock: Number,
-  tags: [Tag],
+  tags: [{ type: Schema.Types.ObjectId, ref: "Tag" }],
 });
 
-module.exports = {
-  getModel: (connection) => {
-    return connection.model("Product", productSchema);
-  },
-};
+module.exports = mongoose.model("Product", productSchema);

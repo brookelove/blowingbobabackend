@@ -7,7 +7,7 @@ const getAllAdmin = async (req, res) => {
     res.status(500).json(err);
   }
 };
-const getSingleAdmin = async (req, res) => {
+const getSingleAdmin = async (req, res, next) => {
   try {
     const admin = await Admin.findOne({ _id: req.params.adminId });
     if (!admin) {
@@ -18,7 +18,7 @@ const getSingleAdmin = async (req, res) => {
     res.status(500).json(err);
   }
 };
-const createAdmin = async (req, res) => {
+const createAdmin = async (req, res, next) => {
   try {
     const admin = await Admin.create(req.body);
     if (!admin) {
@@ -33,7 +33,7 @@ const createAdmin = async (req, res) => {
     res.status(500).json(err);
   }
 };
-const updateAdmin = async (req, res) => {
+const updateAdmin = async (req, res, next) => {
   let id = req.body.id;
   try {
     const admin = await Admin.findByIdAndUpdate(req.params.id, req.body, {
@@ -47,7 +47,7 @@ const updateAdmin = async (req, res) => {
     res.status(500).json({ error: err.message });
   }
 };
-const deleteAdmin = async (res, res, next) => {
+const deleteAdmin = async (req, res, next) => {
   try {
     const admin = await Admin.findByIdAndDelete(req.params.id);
     if (!admin) {

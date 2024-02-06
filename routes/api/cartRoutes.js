@@ -1,5 +1,5 @@
-const router = express.Router();
 const express = require("express");
+const cartRouter = express.Router();
 const {
   getAllCarts,
   getSingleCart,
@@ -8,8 +8,10 @@ const {
   deleteCart,
 } = require("../../controllers/cartControllers");
 
-router.get("/cart", getAllCarts);
-router.get("/cart/:id", getSingleCart);
-router.post("cart", createCart);
-router.put("/cart/:id", updateCart);
-router.delete("/cart/:id", deleteCart);
+cartRouter.get("/cart", getAllCarts);
+cartRouter.get("/cart/:id", getSingleCart);
+cartRouter.post("cart", createCart);
+cartRouter.put("/cart/:id", updateCart);
+cartRouter.delete("/cart/:id", deleteCart);
+
+module.exports = cartRouter;

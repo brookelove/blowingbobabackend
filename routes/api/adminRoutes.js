@@ -1,5 +1,5 @@
-const router = express.Router();
 const express = require("express");
+const adminRouter = express.Router();
 const {
   getAllAdmin,
   getSingleAdmin,
@@ -8,8 +8,10 @@ const {
   deleteAdmin,
 } = require("../../controllers/adminControllers");
 
-router.get("/admin", getAllAdmin);
-router.get("/admin/:id", getSingleAdmin);
-router.post("/admin", createAdmin);
-router.put("/admin/:id", updateAdmin);
-router.delete("/admin/:id", deleteAdmin);
+adminRouter.get("/admin", getAllAdmin);
+adminRouter.get("/admin/:id", getSingleAdmin);
+adminRouter.post("/admin", createAdmin);
+adminRouter.put("/admin/:id", updateAdmin);
+adminRouter.delete("/admin/:id", deleteAdmin);
+
+module.exports = adminRouter;

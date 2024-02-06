@@ -1,5 +1,5 @@
 const Product = require("../models/Products");
-const getAllProducts = async (req, res) => {
+const getAllProducts = async (req, res, next) => {
   try {
     const products = await Product.find();
     res.json(products);
@@ -7,7 +7,7 @@ const getAllProducts = async (req, res) => {
     res.status(500).json(err);
   }
 };
-const getSingleProduct = async (req, res) => {
+const getSingleProduct = async (req, res, next) => {
   try {
     const product = await Product.findOne({ _id: req.params.productId });
     if (!product) {
@@ -18,7 +18,7 @@ const getSingleProduct = async (req, res) => {
     res.status(500).json(err);
   }
 };
-const createProduct = async (req, res) => {
+const createProduct = async (req, res, next) => {
   try {
     const product = await Product.create(req.body);
     if (!product) {
@@ -33,7 +33,7 @@ const createProduct = async (req, res) => {
     res.status(500).json(err);
   }
 };
-const updateProduct = async (req, res) => {
+const updateProduct = async (req, res, next) => {
   let id = req.body.id;
   try {
     const product = await Product.findByIdAndUpdate(id, req.body, {
@@ -47,7 +47,7 @@ const updateProduct = async (req, res) => {
     res.status(500).json({ error: err.message });
   }
 };
-const deleteProduct = async (res, res, next) => {
+const deleteProduct = async (req, res, next) => {
   let id = req.params.id;
   try {
     const product = await Product.findByIdAndDelete(req.params.id); //might change to isShown and make boolean either true or false so then it is not deleted but managers

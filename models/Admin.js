@@ -11,8 +11,4 @@ const adminSchema = new Schema({
   isManager: Boolean,
 });
 
-module.exports = {
-  getModel: (connection) => {
-    return connection.model("Admin", adminSchema);
-  },
-};
+module.exports = mongoose.model("Admin", adminSchema);

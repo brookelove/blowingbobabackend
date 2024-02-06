@@ -3,10 +3,12 @@ const adminRoutes = require("./adminRoutes");
 const cartRoutes = require("./cartRoutes");
 const customerRoutes = require("./customerRoutes");
 const productRoutes = require("./productRoutes");
-const tagRoutes = require("tagRoutes");
+const tagRoutes = require("./tagRoutes");
 
 router.use("/admin", adminRoutes);
 router.use("/cart", cartRoutes);
 router.use("/me", customerRoutes);
 router.use("/product", productRoutes);
-router.use("tag", tagRoutes);
+router.use("/tag", tagRoutes);
+
+module.exports = router;

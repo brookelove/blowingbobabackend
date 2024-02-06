@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const Product = require("./Product");
+const Product = require("./Products");
 const Schema = mongoose.Schema;
 
 mongoose.Promise = global.Promise;
@@ -11,8 +11,4 @@ const cartSchema = new Schema({
   isOrdered: { type: Boolean, default: false },
 });
 
-module.exports = {
-  getModel: (connection) => {
-    return connection.model("Cart", cartSchema);
-  },
-};
+module.exports = mongoose.model("Cart", cartSchema);

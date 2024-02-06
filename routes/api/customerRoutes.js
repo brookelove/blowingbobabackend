@@ -1,5 +1,5 @@
-const router = express.Router();
 const express = require("express");
+const customerRouter = express.Router();
 const {
   getAllCustomers,
   getSingleCustomer,
@@ -8,8 +8,10 @@ const {
   deleteCustomer,
 } = require("../../controllers/customerControllers");
 
-router.get("/customer", getAllCustomers);
-router.get("/customer/:id", getSingleCustomer);
-router.post("/customer", createCustomer);
-router.put("/customer/:id", updateCustomer);
-router.delete("/customer/:id", deleteCustomer);
+customerRouter.get("/customer", getAllCustomers);
+customerRouter.get("/customer/:id", getSingleCustomer);
+customerRouter.post("/customer", createCustomer);
+customerRouter.put("/customer/:id", updateCustomer);
+customerRouter.delete("/customer/:id", deleteCustomer);
+
+module.exports = customerRouter;

@@ -1,6 +1,6 @@
 const Cart = require("../models/Cart");
 const Product = require("../models/Products");
-const getAllCarts = async (req, res) => {
+const getAllCarts = async (req, res, next) => {
   try {
     const carts = Cart.map((cart) => ({
       ...cart.toObject(),
@@ -11,7 +11,7 @@ const getAllCarts = async (req, res) => {
     res.status(500).json(err);
   }
 };
-const getSingleCart = async (req, res) => {
+const getSingleCart = async (req, res, next) => {
   try {
     const cart = await Cart.findOne({ _id: req.params.cartId }).populate(
       "products"
@@ -24,7 +24,7 @@ const getSingleCart = async (req, res) => {
     res.status(500).json(err);
   }
 };
-const createCart = async (req, res) => {
+const createCart = async (req, res, next) => {
   try {
     const cart = await Cart.create(req.body);
     if (!cart) {
@@ -37,7 +37,7 @@ const createCart = async (req, res) => {
     res.status(500).json(err);
   }
 };
-const updateCart = async (req, res) => {
+const updateCart = async (req, res, next) => {
   try {
     const { id, product, quantity } = req.body;
     const cart = await Cart.findById(id);
@@ -62,7 +62,7 @@ const updateCart = async (req, res) => {
     res.status(500).json({ error: err.message });
   }
 };
-const deleteCart = async (res, res, next) => {
+const deleteCart = async (req, res, next) => {
   let id = req.params.id;
   try {
     const cart = await Cart.findByIdAndDelete(req.params.id);

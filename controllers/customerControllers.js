@@ -1,5 +1,5 @@
 const Customer = require("../models/Customer");
-const getAllCustomers = async (req, res) => {
+const getAllCustomers = async (req, res, next) => {
   try {
     const customers = await Customer.find();
     res.json(customers);
@@ -7,7 +7,7 @@ const getAllCustomers = async (req, res) => {
     res.status(500).json(err);
   }
 };
-const getSingleCustomer = async (req, res) => {
+const getSingleCustomer = async (req, res, next) => {
   try {
     const customer = await Customer.findOne({ _id: req.params.customerId });
     if (!customer) {
@@ -18,7 +18,7 @@ const getSingleCustomer = async (req, res) => {
     res.status(500).json(err);
   }
 };
-const createCustomer = async (req, res) => {
+const createCustomer = async (req, res, next) => {
   try {
     const customer = await Customer.create(req.body);
     if (!customer) {
@@ -33,7 +33,7 @@ const createCustomer = async (req, res) => {
     res.status(500).json(err);
   }
 };
-const updateCustomer = async (req, res) => {
+const updateCustomer = async (req, res, next) => {
   let id = req.body.id;
   try {
     const customer = await Customer.findByIdAndUpdate(id, req.body, {
@@ -47,7 +47,7 @@ const updateCustomer = async (req, res) => {
     res.status(500).json({ error: err.message });
   }
 };
-const deleteCustomer = async (res, res, next) => {
+const deleteCustomer = async (req, res, next) => {
   let id = req.params.id;
   try {
     const customer = await Customer.findByIdAndDelete(req.params.id);

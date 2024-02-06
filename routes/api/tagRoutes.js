@@ -1,5 +1,5 @@
-const router = express.Router();
 const express = require("express");
+const tagRouter = express.Router();
 const {
   getAllTags,
   getSingleTag,
@@ -8,8 +8,10 @@ const {
   deleteTag,
 } = require("../../controllers/tagControllers");
 
-router.get("/tag", getAllTags);
-router.get("/tag/:id", getSingleTag);
-router.post("/tag", createTag);
-router.put("/tag/:id", updateTag);
-router.delete("/tag/:id", deleteTag);
+tagRouter.get("/tag", getAllTags);
+tagRouter.get("/tag/:id", getSingleTag);
+tagRouter.post("/tag", createTag);
+tagRouter.put("/tag/:id", updateTag);
+tagRouter.delete("/tag/:id", deleteTag);
+
+module.exports = tagRouter;
