@@ -7,11 +7,13 @@ mongoose.Promise = global.Promise;
 const customerSchema = new Schema({
   firstName: String,
   lastName: String,
+  phoneNumber: String,
   address: String,
   city: String,
   state: String,
   zipCode: Number,
-  cart: [Cart], //needs to be the cart id
+  cart: [{ type: Schema.Types.ObjectId, ref: "Cart" }], //needs to be the cart id
+  pastOrders: [{ type: Schema.Types.ObjectId, ref: "Cart" }],
 });
 
 module.exports = {

@@ -9,8 +9,6 @@ const adminSchema = new Schema({
   firstName: String,
   lastName: String,
   isManager: Boolean,
-  currentCustomers: [Customer],
-  Cart: [Cart],
 });
 
 module.exports = {

@@ -5,9 +5,10 @@ const Schema = mongoose.Schema;
 mongoose.Promise = global.Promise;
 
 const cartSchema = new Schema({
-  product: [Product],
-  total: Number,
-  isOrdered: Boolean,
+  products: [{ type: Schema.Types.ObjectId, ref: "Product" }],
+  quantity: [{ type: Number, default: 1 }],
+  total: { type: Number, default: 0 },
+  isOrdered: { type: Boolean, default: false },
 });
 
 module.exports = {
