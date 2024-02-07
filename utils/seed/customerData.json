@@ -1,0 +1,112 @@
+[
+  {
+    "firstName": "Alice",
+    "lastName": "Johnson",
+    "phoneNumber": "123-456-7890",
+    "address": "123 Main St",
+    "city": "New York",
+    "state": "NY",
+    "zipCode": 10001,
+    "cart": [],
+    "pastOrders": []
+  },
+  {
+    "firstName": "Bob",
+    "lastName": "Smith",
+    "phoneNumber": "234-567-8901",
+    "address": "456 Oak St",
+    "city": "Los Angeles",
+    "state": "CA",
+    "zipCode": 90001,
+    "cart": [],
+    "pastOrders": []
+  },
+  {
+    "firstName": "Carol",
+    "lastName": "Williams",
+    "phoneNumber": "345-678-9012",
+    "address": "789 Elm St",
+    "city": "Chicago",
+    "state": "IL",
+    "zipCode": 60601,
+    "cart": [],
+    "pastOrders": []
+  },
+  {
+    "firstName": "David",
+    "lastName": "Brown",
+    "phoneNumber": "456-789-0123",
+    "address": "987 Pine St",
+    "city": "Houston",
+    "state": "TX",
+    "zipCode": 77001,
+    "cart": [],
+    "pastOrders": []
+  },
+  {
+    "firstName": "Emma",
+    "lastName": "Jones",
+    "phoneNumber": "567-890-1234",
+    "address": "654 Maple St",
+    "city": "Miami",
+    "state": "FL",
+    "zipCode": 33101,
+    "cart": [],
+    "pastOrders": []
+  },
+  {
+    "firstName": "Frank",
+    "lastName": "Davis",
+    "phoneNumber": "678-901-2345",
+    "address": "321 Cedar St",
+    "city": "Seattle",
+    "state": "WA",
+    "zipCode": 98101,
+    "cart": [],
+    "pastOrders": []
+  },
+  {
+    "firstName": "Grace",
+    "lastName": "Miller",
+    "phoneNumber": "789-012-3456",
+    "address": "456 Birch St",
+    "city": "Atlanta",
+    "state": "GA",
+    "zipCode": 30301,
+    "cart": [],
+    "pastOrders": []
+  },
+  {
+    "firstName": "Henry",
+    "lastName": "Wilson",
+    "phoneNumber": "890-123-4567",
+    "address": "123 Walnut St",
+    "city": "San Francisco",
+    "state": "CA",
+    "zipCode": 94101,
+    "cart": [],
+    "pastOrders": []
+  },
+  {
+    "firstName": "Isabella",
+    "lastName": "Taylor",
+    "phoneNumber": "901-234-5678",
+    "address": "789 Cherry St",
+    "city": "Dallas",
+    "state": "TX",
+    "zipCode": 75201,
+    "cart": [],
+    "pastOrders": []
+  },
+  {
+    "firstName": "Jack",
+    "lastName": "Anderson",
+    "phoneNumber": "012-345-6789",
+    "address": "654 Apple St",
+    "city": "Boston",
+    "state": "MA",
+    "zipCode": 25201,
+    "cart": [],
+    "pastOrders": []
+  }
+]

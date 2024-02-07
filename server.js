@@ -3,6 +3,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const connection = require("./config/connection");
 const routes = require("./routes/index");
+const seedDatabase = require("./utils/seed/seed");
 
 const PORT = process.env.PORT || 3000;
 
@@ -33,4 +34,8 @@ app.use((req, res) => {
 
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
+  if (process.env.NODE_ENV !== "production") {
+    console.log("Seeding database...");
+    seedDatabase();
+  }
 });

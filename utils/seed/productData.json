@@ -1,0 +1,69 @@
+[
+  {
+    "productName": "Classic Milk Tea",
+    "description":
+      "A classic Taiwanese drink made with black tea, milk, and tapioca pearls.",
+    "price": 4.99,
+    "stock": 50
+  },
+  {
+    "productName": "Taro Milk Tea",
+    "description": "Creamy taro-flavored milk tea with chewy tapioca pearls.",
+    "price": 5.49,
+    "stock": 40
+  },
+  {
+    "productName": "Matcha Latte",
+    "description":
+      "Smooth and earthy matcha green tea blended with steamed milk.",
+    "price": 5.99,
+    "stock": 35
+  },
+  {
+    "productName": "Thai Tea",
+    "description":
+      "Sweet and creamy Thai tea with a hint of spices and boba pearls.",
+    "price": 4.79,
+    "stock": 45
+  },
+  {
+    "productName": "Honeydew Milk Tea",
+    "description":
+      "Refreshing honeydew-flavored milk tea with chewy tapioca pearls.",
+    "price": 5.29,
+    "stock": 30
+  },
+  {
+    "productName": "Mango Slush",
+    "description":
+      "Tropical mango slush topped with boba pearls for a refreshing treat.",
+    "price": 6.49,
+    "stock": 25
+  },
+  {
+    "productName": "Strawberry Green Tea",
+    "description": "Fresh strawberry-infused green tea with sweet boba pearls.",
+    "price": 5.79,
+    "stock": 35
+  },
+  {
+    "productName": "Brown Sugar Boba Milk",
+    "description":
+      "Rich and creamy milk infused with brown sugar syrup and topped with chewy boba pearls.",
+    "price": 6.99,
+    "stock": 20
+  },
+  {
+    "productName": "Jasmine Milk Tea",
+    "description": "Fragrant jasmine tea mixed with creamy milk and boba pearls.",
+    "price": 4.89,
+    "stock": 40
+  },
+  {
+    "productName": "Peach Oolong Tea",
+    "description":
+      "Light and refreshing oolong tea infused with peach flavor and boba pearls.",
+    "price": 5.69,
+    "stock": 30
+  }
+]

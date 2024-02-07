@@ -1,0 +1,52 @@
+[
+  {
+    "firstName": "John",
+    "lastName": "Doe",
+    "isManager": true
+  },
+  {
+    "firstName": "Jane",
+    "lastName": "Smith",
+    "isManager": true
+  },
+  {
+    "firstName": "Michael",
+    "lastName": "Johnson",
+    "isManager": true
+  },
+  {
+    "firstName": "Emily",
+    "lastName": "Brown",
+    "isManager": true
+  },
+  {
+    "firstName": "David",
+    "lastName": "Wilson",
+    "isManager": true
+  },
+  {
+    "firstName": "Sarah",
+    "lastName": "Anderson",
+    "isManager": true
+  },
+  {
+    "firstName": "James",
+    "lastName": "Taylor",
+    "isManager": true
+  },
+  {
+    "firstName": "Jessica",
+    "lastName": "Martinez",
+    "isManager": true
+  },
+  {
+    "firstName": "Daniel",
+    "lastName": "Hernandez",
+    "isManager": true
+  },
+  {
+    "firstName": "Emma",
+    "lastName": "Garcia",
+    "isManager": true
+  }
+]
