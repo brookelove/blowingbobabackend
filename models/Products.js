@@ -10,6 +10,7 @@ const productSchema = new Schema({
   price: Number,
   stock: Number,
   tags: [{ type: Schema.Types.ObjectId, ref: "Tag" }],
+  images: [String],
 });
 
 module.exports = mongoose.model("Product", productSchema);
