@@ -1,20 +1,22 @@
 // Import necessary modules
 const mongoose = require("mongoose");
-const db = require("./config/connection"); // Import your MongoDB connection
-const Admin = require("./models/Admin"); // Import your Mongoose models
-const Customer = require("./models/Customer");
-const Product = require("./models/Products");
-const Tag = require("./models/Tags");
-// Import data
+const Admin = require("../../models/Admin");
+const Customer = require("../../models/Customer");
+const Product = require("../../models/Products");
+const Tag = require("../../models/Tags");
 const adminData = require("./adminData.json");
-const customerData = require("./customertData.json");
+const customerData = require("./customerData.json");
 const productData = require("./productData.json");
 const tagData = require("./tagData.json");
+
 // Function to seed the database
 const seedDatabase = async () => {
   try {
     // Connect to MongoDB
-    await db.connect();
+    await mongoose.connect("mongodb://localhost:27017/blowing-boba", {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    });
 
     // Seed Admins
     await seedCollection(Admin, adminData, "admins");
@@ -26,12 +28,15 @@ const seedDatabase = async () => {
     await seedCollection(Tag, tagData, "tags");
 
     console.log("Database seeded successfully.");
-    await mongoose.connection.close();
   } catch (error) {
     console.error("Error seeding database:", error);
-    process.exit(1);
+  } finally {
+    // Close MongoDB connection
+    await mongoose.disconnect();
   }
 };
+
+// Function to seed a collection
 const seedCollection = async (Model, data, collectionName) => {
   for (const item of data) {
     const existingItem = await Model.findOne(item);
@@ -43,4 +48,14 @@ const seedCollection = async (Model, data, collectionName) => {
     }
   }
 };
-module.exports = seedDatabase;
+
+// module.exports = seedDatabase;
+seedDatabase()
+  .then(() => {
+    console.log("Database seeded successfully.");
+    mongoose.disconnect();
+  })
+  .catch((error) => {
+    console.error("Error seeding database:", error);
+    process.exit(1);
+  });
