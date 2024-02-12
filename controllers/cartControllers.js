@@ -13,7 +13,7 @@ const getAllCarts = async (req, res, next) => {
 };
 const getSingleCart = async (req, res, next) => {
   try {
-    const cart = await Cart.findOne({ _id: req.params.cartId }).populate(
+    const cart = await Cart.findOne({ _id: req.params.id }).populate(
       "products"
     );
     if (!cart) {

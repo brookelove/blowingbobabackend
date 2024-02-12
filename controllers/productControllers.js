@@ -9,7 +9,7 @@ const getAllProducts = async (req, res, next) => {
 };
 const getSingleProduct = async (req, res, next) => {
   try {
-    const product = await Product.findOne({ _id: req.params.productId });
+    const product = await Product.findOne({ _id: req.params.id });
     if (!product) {
       return res.status(404).json({ message: "No product with that ID" });
     }

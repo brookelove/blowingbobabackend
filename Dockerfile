@@ -8,8 +8,8 @@ RUN npm install
 COPY . .
 EXPOSE 3000
 
-# Seed the database
-RUN node utils/seed/seed.js
+# Seed the database dont need to run it everytime
+# RUN node utils/seed/seed.js
 
 # Command to start the server
 CMD ["npm","run","start"]

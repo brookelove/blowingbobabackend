@@ -9,7 +9,7 @@ const getAllAdmin = async (req, res) => {
 };
 const getSingleAdmin = async (req, res, next) => {
   try {
-    const admin = await Admin.findOne({ _id: req.params.adminId });
+    const admin = await Admin.findOne({ _id: req.params.id });
     if (!admin) {
       return res.status(404).json({ message: "No admin with that ID" });
     }

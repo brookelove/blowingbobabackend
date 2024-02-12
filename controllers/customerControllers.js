@@ -9,7 +9,7 @@ const getAllCustomers = async (req, res, next) => {
 };
 const getSingleCustomer = async (req, res, next) => {
   try {
-    const customer = await Customer.findOne({ _id: req.params.customerId });
+    const customer = await Customer.findOne({ _id: req.params.id });
     if (!customer) {
       return res.status(404).json({ message: "No customer with that ID" });
     }

@@ -9,7 +9,7 @@ const getAllTags = async (req, res, next) => {
 };
 const getSingleTag = async (req, res, next) => {
   try {
-    const tag = await Tag.findOne({ _id: req.params.tagId });
+    const tag = await Tag.findOne({ _id: req.params.id });
     if (!tag) {
       return res.status(404).json({ message: "No tag with that ID" });
     }
