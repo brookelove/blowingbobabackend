@@ -9,6 +9,8 @@ const productSchema = new Schema({
   description: String,
   price: Number,
   stock: Number,
+  ifJelly: Boolean,
+  whatJelly: String,
   tags: [{ type: Schema.Types.ObjectId, ref: "Tag" }],
   images: [String],
 });
