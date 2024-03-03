@@ -1,7 +1,8 @@
 const mongoose = require("mongoose");
 
-// const dbUrl = "mongodb://localhost:27017/blowing-boba";
-const dbUrl = "mongodb://blowingbobabackend-mongodb-1:27017/blowing-boba";
+const dbUrl = "mongodb://localhost:27017/blowing-boba";
+// To run it in a docker instance
+// const dbUrl = "mongodb://blowingbobabackend-mongodb-1:27017/blowing-boba";
 
 mongoose
   .connect(dbUrl, {
