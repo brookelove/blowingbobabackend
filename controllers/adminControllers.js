@@ -30,7 +30,7 @@ const getSingleAdmin = async (req, res, next) => {
     }
     res.format({
       xml: function () {
-        const jsonData = JSON.stringify(admins);
+        const jsonData = JSON.stringify(admin);
         const xmlData = convert.json2xml(jsonData, {
           compact: true,
           spaces: 4,
@@ -76,7 +76,7 @@ const updateAdmin = async (req, res, next) => {
     // res.json(admin);
     res.format({
       xml: function () {
-        const jsonData = JSON.stringify(admins);
+        const jsonData = JSON.stringify(admin);
         const xmlData = convert.json2xml(jsonData, {
           compact: true,
           spaces: 4,

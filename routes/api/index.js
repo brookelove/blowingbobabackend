@@ -4,7 +4,7 @@ const cartRoutes = require("./cartRoutes");
 const customerRoutes = require("./customerRoutes");
 const productRoutes = require("./productRoutes");
 const tagRoutes = require("./tagRoutes");
-
+// /api/-> item
 router.use("/admin", adminRoutes);
 router.use("/cart", cartRoutes);
 router.use("/me", customerRoutes);
