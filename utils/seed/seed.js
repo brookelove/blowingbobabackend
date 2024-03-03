@@ -1,6 +1,7 @@
 // Import necessary modules
 const mongoose = require("mongoose");
 const Admin = require("../../models/Admin");
+const Cart = require("../../models/Cart");
 const Customer = require("../../models/Customer");
 const Product = require("../../models/Products");
 const Tag = require("../../models/Tags");
@@ -26,6 +27,8 @@ const seedDatabase = async () => {
     await seedCollection(Product, productData, "products");
     // Seed Tags
     await seedCollection(Tag, tagData, "tags");
+    // Seed Carts
+    await seedCarts();
 
     console.log("Database seeded successfully.");
   } catch (error) {
@@ -46,6 +49,26 @@ const seedCollection = async (Model, data, collectionName) => {
     } else {
       console.log(`${collectionName} already contains ${item}`);
     }
+  }
+};
+const seedCarts = async () => {
+  const customers = await Customer.find();
+  const products = await Product.find();
+
+  for (const customer of customers) {
+    // Randomly select a product
+    const randomProduct = products[Math.floor(Math.random() * products.length)];
+
+    // Create a cart for the customer with the random product
+    const cart = new Cart({
+      customerId: customer._id,
+      products: [randomProduct._id],
+      quantity: [1],
+      total: randomProduct.price,
+      isOrdered: false,
+    });
+
+    await cart.save();
   }
 };
 

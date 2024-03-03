@@ -34,7 +34,7 @@ const createTag = async (req, res, next) => {
   }
 };
 const updateTag = async (req, res, next) => {
-  let id = req.body.id;
+  let id = req.params.id;
   try {
     const tag = await Tag.findByIdAndUpdate(id, req.body, {
       new: true,

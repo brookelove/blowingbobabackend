@@ -34,7 +34,7 @@ const createCustomer = async (req, res, next) => {
   }
 };
 const updateCustomer = async (req, res, next) => {
-  let id = req.body.id;
+  let id = req.params.id;
   try {
     const customer = await Customer.findByIdAndUpdate(id, req.body, {
       new: true,

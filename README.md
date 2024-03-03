@@ -38,9 +38,10 @@ To get started with Blowing Boba Backend, follow these steps:
 2. Clone Repository: Clone the backend repository from GitHub.
 3. Configure Environment: Set up your environment variables for MongoDB connection and other configurations.
 4. Install Packages: Run `npm install` to install the necessary dependencies.
-5. Run Seeds: Run `npm run seeds` to install the necessary seeds.
+5. Run Seeds: Run `npm run seeds` to install the necessary seeds if needed.
 6. Start Server: Use the command `npm start` to start the backend server.
 7. Explore API: Access the API documentation to understand the available endpoints and how to interact with them.
+*Note: This code runs on localhost
 
 ## Usage Examples
 

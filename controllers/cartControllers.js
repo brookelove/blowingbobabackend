@@ -2,12 +2,14 @@ const Cart = require("../models/Cart");
 const Product = require("../models/Products");
 const getAllCarts = async (req, res, next) => {
   try {
-    const carts = Cart.map((cart) => ({
+    const carts = await Cart.find().populate("products");
+    const formattedCarts = carts.map((cart) => ({
       ...cart.toObject(),
       productCount: cart.products.length,
     }));
-    res.json(carts);
+    res.json(formattedCarts);
   } catch (err) {
+    console.log(err);
     res.status(500).json(err);
   }
 };
@@ -32,6 +34,7 @@ const createCart = async (req, res, next) => {
         message: "Cart created 🎉",
       });
     }
+    res.status(201).json({ message: "Get Shopping", cart: cart });
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
@@ -39,25 +42,41 @@ const createCart = async (req, res, next) => {
 };
 const updateCart = async (req, res, next) => {
   try {
-    const { id, product, quantity } = req.body;
+    const { id } = req.params;
+    const { products, quantity } = req.body;
     const cart = await Cart.findById(id);
-
-    if (!cart) {
-      return res.status(404).json({ message: "No cart with that ID" });
+    if (!cart || !products || !quantity) {
+      return res.status(400).json({ error: "Invalid request body format" });
     }
+    // update cart products and quantity
 
-    const index = cart.products.findIndex((p) => p.equals(product));
-    if (index !== -1) {
-      cart.quantities[index] += quantity;
-    } else {
-      cart.products.push(product);
-      cart.quantities.push(quantity);
+    products.push(products[products.length - 1]);
+    quantity.push(quantity[quantity.length - 1]);
+
+    let totalPrice = 0;
+    for (let i = 0; i < products.length; i++) {
+      const productId = products[i];
+      const quantityId = quantity[i];
+
+      //get product prices to create the total
+      const product = await Product.findById(productId);
+      if (!product) {
+        return res
+          .status(404)
+          .json({ error: `Product with ID ${productId} not found` });
+      }
+
+      // Calculate the subtotal for this product
+      const subtotal = product.price * quantityId;
+      totalPrice += subtotal;
     }
-    cart.total += product.price * quantity;
-
+    cart.total = totalPrice;
     await cart.save();
 
-    res.json(cart);
+    // Fetch the updated cart after adding the item
+    const updatedCart = await Cart.findById(id);
+
+    res.json(updatedCart);
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
