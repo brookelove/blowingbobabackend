@@ -6,9 +6,13 @@ mongoose.Promise = global.Promise;
 
 const cartSchema = new Schema({
   customerId: { type: Schema.Types.ObjectId, ref: "Customer" },
-  products: [{ type: Schema.Types.ObjectId, ref: "Product" }],
-  quantity: [{ type: Number, default: 1 }],
+  items: [{ type: Schema.Types.ObjectId, ref: "CartItem" }],
   total: { type: Number, default: 0 },
+  isDiscount: { type: Boolean, default: false },
+  discount: { type: Number },
+  orderStatus: { type: String, default: "pending" },
+  createdAt: { type: Date, default: Date.now },
+  updatedAt: { type: Date, default: Date.now },
   isOrdered: { type: Boolean, default: false },
 });
 

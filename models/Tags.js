@@ -6,7 +6,7 @@ mongoose.Promise = global.Promise;
 const tagSchema = new Schema({
   tagName: String,
   color: String,
-  createdAt: Date,
+  createdAt: { type: Date, default: Date.now },
 });
 
 module.exports = mongoose.model("Tag", tagSchema);

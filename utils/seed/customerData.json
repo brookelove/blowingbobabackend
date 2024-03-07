@@ -1,112 +1,226 @@
 [
   {
+    "firstName": "John",
+    "lastName": "Doe",
+    "phoneNumber": "1234567890",
+    "shippingAddress": "123 Main St, City, Country",
+    "billingAddress": "456 Elm St, City, Country",
+    "password": "hashed_password_here"
+  },
+  {
+    "firstName": "Jane",
+    "lastName": "Doe",
+    "phoneNumber": "0987654321",
+    "shippingAddress": "456 Oak St, City, Country",
+    "billingAddress": "789 Maple St, City, Country",
+    "password": "hashed_password_here"
+  },
+  {
     "firstName": "Alice",
-    "lastName": "Johnson",
-    "phoneNumber": "123-456-7890",
-    "address": "123 Main St",
-    "city": "New York",
-    "state": "NY",
-    "zipCode": 10001,
-    "cart": [],
-    "pastOrders": []
+    "lastName": "Smith",
+    "phoneNumber": "2345678901",
+    "shippingAddress": "789 Elm St, City, Country",
+    "billingAddress": "123 Pine St, City, Country",
+    "password": "hashed_password_here"
   },
   {
     "firstName": "Bob",
-    "lastName": "Smith",
-    "phoneNumber": "234-567-8901",
-    "address": "456 Oak St",
-    "city": "Los Angeles",
-    "state": "CA",
-    "zipCode": 90001,
-    "cart": [],
-    "pastOrders": []
+    "lastName": "Johnson",
+    "phoneNumber": "6789012345",
+    "shippingAddress": "456 Birch St, City, Country",
+    "billingAddress": "789 Cedar St, City, Country",
+    "password": "hashed_password_here"
   },
   {
-    "firstName": "Carol",
+    "firstName": "Emily",
     "lastName": "Williams",
-    "phoneNumber": "345-678-9012",
-    "address": "789 Elm St",
-    "city": "Chicago",
-    "state": "IL",
-    "zipCode": 60601,
-    "cart": [],
-    "pastOrders": []
+    "phoneNumber": "3456789012",
+    "shippingAddress": "123 Elm St, City, Country",
+    "billingAddress": "456 Oak St, City, Country",
+    "password": "hashed_password_here"
   },
   {
-    "firstName": "David",
+    "firstName": "Michael",
     "lastName": "Brown",
-    "phoneNumber": "456-789-0123",
-    "address": "987 Pine St",
-    "city": "Houston",
-    "state": "TX",
-    "zipCode": 77001,
-    "cart": [],
-    "pastOrders": []
+    "phoneNumber": "7890123456",
+    "shippingAddress": "789 Maple St, City, Country",
+    "billingAddress": "123 Pine St, City, Country",
+    "password": "hashed_password_here"
   },
   {
     "firstName": "Emma",
     "lastName": "Jones",
-    "phoneNumber": "567-890-1234",
-    "address": "654 Maple St",
-    "city": "Miami",
-    "state": "FL",
-    "zipCode": 33101,
-    "cart": [],
-    "pastOrders": []
+    "phoneNumber": "4567890123",
+    "shippingAddress": "456 Oak St, City, Country",
+    "billingAddress": "789 Elm St, City, Country",
+    "password": "hashed_password_here"
   },
   {
-    "firstName": "Frank",
-    "lastName": "Davis",
-    "phoneNumber": "678-901-2345",
-    "address": "321 Cedar St",
-    "city": "Seattle",
-    "state": "WA",
-    "zipCode": 98101,
-    "cart": [],
-    "pastOrders": []
+    "firstName": "James",
+    "lastName": "Garcia",
+    "phoneNumber": "8901234567",
+    "shippingAddress": "789 Cedar St, City, Country",
+    "billingAddress": "123 Birch St, City, Country",
+    "password": "hashed_password_here"
   },
   {
-    "firstName": "Grace",
-    "lastName": "Miller",
-    "phoneNumber": "789-012-3456",
-    "address": "456 Birch St",
-    "city": "Atlanta",
-    "state": "GA",
-    "zipCode": 30301,
-    "cart": [],
-    "pastOrders": []
+    "firstName": "Olivia",
+    "lastName": "Martinez",
+    "phoneNumber": "5678901234",
+    "shippingAddress": "123 Main St, City, Country",
+    "billingAddress": "456 Elm St, City, Country",
+    "password": "hashed_password_here"
   },
   {
-    "firstName": "Henry",
-    "lastName": "Wilson",
-    "phoneNumber": "890-123-4567",
-    "address": "123 Walnut St",
-    "city": "San Francisco",
-    "state": "CA",
-    "zipCode": 94101,
-    "cart": [],
-    "pastOrders": []
+    "firstName": "William",
+    "lastName": "Hernandez",
+    "phoneNumber": "9012345678",
+    "shippingAddress": "456 Oak St, City, Country",
+    "billingAddress": "789 Maple St, City, Country",
+    "password": "hashed_password_here"
+  },
+  {
+    "firstName": "Sophia",
+    "lastName": "Lopez",
+    "phoneNumber": "6789012345",
+    "shippingAddress": "789 Elm St, City, Country",
+    "billingAddress": "123 Pine St, City, Country",
+    "password": "hashed_password_here"
+  },
+  {
+    "firstName": "Liam",
+    "lastName": "Gonzalez",
+    "phoneNumber": "3456789012",
+    "shippingAddress": "123 Elm St, City, Country",
+    "billingAddress": "456 Oak St, City, Country",
+    "password": "hashed_password_here"
   },
   {
     "firstName": "Isabella",
-    "lastName": "Taylor",
-    "phoneNumber": "901-234-5678",
-    "address": "789 Cherry St",
-    "city": "Dallas",
-    "state": "TX",
-    "zipCode": 75201,
-    "cart": [],
-    "pastOrders": []
+    "lastName": "Rodriguez",
+    "phoneNumber": "8901234567",
+    "shippingAddress": "789 Maple St, City, Country",
+    "billingAddress": "123 Pine St, City, Country",
+    "password": "hashed_password_here"
   },
   {
-    "firstName": "Jack",
-    "lastName": "Anderson",
-    "phoneNumber": "012-345-6789",
-    "address": "654 Apple St",
-    "city": "Boston",
-    "state": "MA",
-    "zipCode": 25201,
-    "cart": [],
-    "pastOrders": []
+    "firstName": "Mason",
+    "lastName": "Perez",
+    "phoneNumber": "4567890123",
+    "shippingAddress": "456 Oak St, City, Country",
+    "billingAddress": "789 Elm St, City, Country",
+    "password": "hashed_password_here"
+  },
+  {
+    "firstName": "Charlotte",
+    "lastName": "Williams",
+    "phoneNumber": "9012345678",
+    "shippingAddress": "789 Cedar St, City, Country",
+    "billingAddress": "123 Birch St, City, Country",
+    "password": "hashed_password_here"
+  },
+  {
+    "firstName": "Logan",
+    "lastName": "Flores",
+    "phoneNumber": "5678901234",
+    "shippingAddress": "123 Main St, City, Country",
+    "billingAddress": "456 Elm St, City, Country",
+    "password": "hashed_password_here"
+  },
+  {
+    "firstName": "Amelia",
+    "lastName": "Ortiz",
+    "phoneNumber": "8901234567",
+    "shippingAddress": "456 Oak St, City, Country",
+    "billingAddress": "789 Maple St, City, Country",
+    "password": "hashed_password_here"
+  },
+  {
+    "firstName": "Ethan",
+    "lastName": "Jackson",
+    "phoneNumber": "3456789012",
+    "shippingAddress": "789 Elm St, City, Country",
+    "billingAddress": "123 Pine St, City, Country",
+    "password": "hashed_password_here"
+  },
+  {
+    "firstName": "Ava",
+    "lastName": "Hill",
+    "phoneNumber": "6789012345",
+    "shippingAddress": "123 Elm St, City, Country",
+    "billingAddress": "456 Oak St, City, Country",
+    "password": "hashed_password_here"
+  },
+  {
+    "firstName": "Noah",
+    "lastName": "King",
+    "phoneNumber": "9012345678",
+    "shippingAddress": "789 Maple St, City, Country",
+    "billingAddress": "123 Pine St, City, Country",
+    "password": "hashed_password_here"
+  },
+  {
+    "firstName": "Harper",
+    "lastName": "Scott",
+    "phoneNumber": "4567890123",
+    "shippingAddress": "456 Oak St, City, Country",
+    "billingAddress": "789 Elm St, City, Country",
+    "password": "hashed_password_here"
+  },
+  {
+    "firstName": "Lucas",
+    "lastName": "Green",
+    "phoneNumber": "8901234567",
+    "shippingAddress": "789 Cedar St, City, Country",
+    "billingAddress": "123 Birch St, City, Country",
+    "password": "hashed_password_here"
+  },
+  {
+    "firstName": "Evelyn",
+    "lastName": "Adams",
+    "phoneNumber": "5678901234",
+    "shippingAddress": "123 Main St, City, Country",
+    "billingAddress": "456 Elm St, City, Country",
+    "password": "hashed_password_here"
+  }, 
+  {
+    "firstName": "Liam",
+    "lastName": "Baker",
+    "phoneNumber": "8901234567",
+    "shippingAddress": "456 Oak St, City, Country",
+    "billingAddress": "789 Maple St, City, Country",
+    "password": "hashed_password_here"
+  },
+  {
+    "firstName": "Ella",
+    "lastName": "Gonzalez",
+    "phoneNumber": "3456789012",
+    "shippingAddress": "789 Elm St, City, Country",
+    "billingAddress": "123 Pine St, City, Country",
+    "password": "hashed_password_here"
+  },
+  {
+    "firstName": "Jackson",
+    "lastName": "Barnes",
+    "phoneNumber": "6789012345",
+    "shippingAddress": "123 Elm St, City, Country",
+    "billingAddress": "456 Oak St, City, Country",
+    "password": "hashed_password_here"
+  },
+  {
+    "firstName": "Mia",
+    "lastName": "Collins",
+    "phoneNumber": "9012345678",
+    "shippingAddress": "789 Cedar St, City, Country",
+    "billingAddress": "123 Birch St, City, Country",
+    "password": "hashed_password_here"
+  },
+  {
+    "firstName": "Aiden",
+    "lastName": "Stewart",
+    "phoneNumber": "5678901234",
+    "shippingAddress": "123 Main St, City, Country",
+    "billingAddress": "456 Elm St, City, Country",
+    "password": "hashed_password_here"
   }
 ]

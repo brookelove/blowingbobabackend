@@ -5,8 +5,10 @@ const Cart = require("../../models/Cart");
 const Customer = require("../../models/Customer");
 const Product = require("../../models/Products");
 const Tag = require("../../models/Tags");
+const Discount = require("../../models/Discount");
 const adminData = require("./adminData.json");
 const customerData = require("./customerData.json");
+const discountData = require("./discountItem.json");
 const productData = require("./productData.json");
 const tagData = require("./tagData.json");
 
@@ -20,9 +22,11 @@ const seedDatabase = async () => {
     });
 
     // Seed Admins
-    await seedCollection(Admin, adminData, "admins");
+    // await seedCollection(Admin, adminData, "admins");
     // Seed Customers
     await seedCollection(Customer, customerData, "customers");
+    // Seed Discounts
+    await seedCollection(Discount, discountData, "disocunts");
     // Seed Products
     await seedCollection(Product, productData, "products");
     // Seed Tags

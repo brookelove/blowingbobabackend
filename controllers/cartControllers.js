@@ -2,12 +2,8 @@ const Cart = require("../models/Cart");
 const Product = require("../models/Products");
 const getAllCarts = async (req, res, next) => {
   try {
-    const carts = await Cart.find().populate("products");
-    const formattedCarts = carts.map((cart) => ({
-      ...cart.toObject(),
-      productCount: cart.products.length,
-    }));
-    res.json(formattedCarts);
+    const carts = await Cart.find();
+    res.json(carts);
   } catch (err) {
     console.log(err);
     res.status(500).json(err);

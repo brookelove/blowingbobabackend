@@ -1,0 +1,114 @@
+[
+    {
+      "discountName": "Boba Bonanza",
+      "amount": 10,
+      "available": true,
+      "dateOpen": "2024-03-01T00:00:00.000Z",
+      "dateClose": "2024-03-31T23:59:59.000Z"
+    },
+    {
+      "discountName": "Holiday Happiness",
+      "amount": 5,
+      "available": false,
+      "dateOpen": "2024-12-01T00:00:00.000Z",
+      "dateClose": "2024-12-25T23:59:59.000Z"
+    },
+    {
+      "discountName": "Bubble Tea Bliss",
+      "amount": 10,
+      "available": true,
+      "dateOpen": "2024-01-01T00:00:00.000Z",
+      "dateClose": "2024-01-31T23:59:59.000Z"
+    },
+    {
+      "discountName": "Festive Flavor Discount",
+      "amount": 15,
+      "available": false,
+      "dateOpen": "2024-11-01T00:00:00.000Z",
+      "dateClose": "2024-12-31T23:59:59.000Z"
+    },
+    {
+      "discountName": "Boba Fest Discount",
+      "amount": 15,
+      "available": true,
+      "dateOpen": "2024-09-01T00:00:00.000Z",
+      "dateClose": "2024-09-30T23:59:59.000Z"
+    },
+        {
+          "discountName": "Seasonal Sip Savings",
+          "amount": 15,
+          "available": true,
+          "dateOpen": "2024-03-21T00:00:00.000Z",
+          "dateClose": "2024-06-21T23:59:59.000Z"
+        },
+        {
+          "discountName": "Boba Joy Discount",
+          "amount": 15,
+          "available": false,
+          "dateOpen": "2024-02-14T00:00:00.000Z",
+          "dateClose": "2024-02-14T23:59:59.000Z"
+        },
+        {
+          "discountName": "Holiday Boba Bash",
+          "amount": 15,
+          "available": true,
+          "dateOpen": "2024-12-24T00:00:00.000Z",
+          "dateClose": "2024-12-25T23:59:59.000Z"
+        },
+        {
+          "discountName": "Festive Boba Delight",
+          "amount": 15,
+          "available": true,
+          "dateOpen": "2024-12-20T00:00:00.000Z",
+          "dateClose": "2024-12-31T23:59:59.000Z"
+        },
+        {
+          "discountName": "Boba Wonderland",
+          "amount": 15,
+          "available": false,
+          "dateOpen": "2024-12-01T00:00:00.000Z",
+          "dateClose": "2024-12-31T23:59:59.000Z"
+        },
+        {
+          "discountName": "Holiday Boba Extravaganza",
+          "amount": 15,
+          "available": true,
+          "dateOpen": "2024-11-25T00:00:00.000Z",
+          "dateClose": "2024-12-31T23:59:59.000Z"
+        },
+        {
+          "discountName": "Winter Sip Savings",
+          "amount": 15,
+          "available": false,
+          "dateOpen": "2024-12-21T00:00:00.000Z",
+          "dateClose": "2025-03-21T23:59:59.000Z"
+        },
+        {
+          "discountName": "Boba Cheer Discount",
+          "amount": 15,
+          "available": true,
+          "dateOpen": "2024-12-01T00:00:00.000Z",
+          "dateClose": "2024-12-25T23:59:59.000Z"
+        },
+        {
+          "discountName": "Seasonal Boba Bliss",
+          "amount": 15,
+          "available": false,
+          "dateOpen": "2024-06-21T00:00:00.000Z",
+          "dateClose": "2024-09-21T23:59:59.000Z"
+        },
+        {
+          "discountName": "Festive Bubble Tea Discount",
+          "amount": 15,
+          "available": true,
+          "dateOpen": "2024-11-01T00:00:00.000Z",
+          "dateClose": "2024-12-31T23:59:59.000Z"
+        },
+        {
+          "discountName": "Buy 3 Get 1 Free",
+          "amount": 100,
+          "available": true
+        }
+      ]
+      
+  
