@@ -10,6 +10,7 @@ const customerSchema = new Schema({
   shippingAddress: String,
   billingAddress: String,
   password: String, //hashed
+  reward: Number,
 });
 
 module.exports = mongoose.model("Customer", customerSchema);
